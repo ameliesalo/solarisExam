@@ -6,7 +6,6 @@ body{
     grid-template-areas: 
     "planets planets planets h1 h1 h1 h1"
     "planets planets planets h2 h2 h2"
-    "planets planets planets p p p"
     "planets planets planets planets planets planets";
 }
 
@@ -160,7 +159,16 @@ button{
 }
 
 .data{
+    width: 50vw;
+    height: 80vh;
+
     grid-area: data;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-items: center;
 }
 
