@@ -1,0 +1,195 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #0C164D 0%, #190B22 100%);
+    display: grid;
+    grid-template-areas: 
+    "planets planets planets h1 h1 h1 h1"
+    "planets planets planets h2 h2 h2"
+    "planets planets planets planets planets planets";
+}
+
+h1{
+    color: rgba(255, 255, 255, 1);
+    font-family: Secular One;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 60px;
+    letter-spacing: 0.09em;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    grid-area: h1;
+}
+
+h2{
+    font-family: Lora;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.6em;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(255, 208, 41, 1);
+    grid-area: h2;
+}
+
+.planets{
+    width: 100vw;
+    grid-area: planets;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sun{
+    width: 20vw;
+    height: 100vh;
+    top: 79.94px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(255, 208, 41, 1);
+    border-radius: 50%;
+    transform: translateX(-120px);
+}
+
+.neptunus{
+    width: 66px;
+    height: 66px;
+    top: 417px;
+    left: 1306px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(122, 145, 167, 1);
+    border-radius: 50%;
+}
+
+.uranus{
+    width: 66px;
+    height: 66px;
+    top: 417px;
+    left: 1136px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(201, 212, 241, 1);
+    border-radius: 50%;
+}
+
+.saturnus{
+    width: 144px;
+    height: 144px;
+    top: 378px;
+    left: 875px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(199, 170, 114, 1);
+    border-radius: 50%;
+}
+
+.jupiter{
+    width: 188px;
+    height: 188px;
+    top: 356px;
+    left: 576px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(226, 148, 104, 1);
+    border-radius: 50%;
+}
+
+.mars{
+    width: 14px;
+    height: 14px;
+    top: 443px;
+    left: 473px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(239, 95, 95, 1);
+    border-radius: 50%;
+}
+
+.earth{
+    width: 28px;
+    height: 28px;
+    top: 436px;
+    left: 375px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(66, 142, 212, 1);
+    border-radius: 50%;
+}
+
+.venus{
+    width: 26px;
+    height: 26px;
+    top: 437px;
+    left: 280px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(231, 205, 205, 1);
+    border-radius: 50%;
+}
+
+.mercury{
+    width: 14px;
+    height: 14px;
+    top: 443px;
+    left: 203px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(136, 136, 136, 1);
+    border-radius: 50%;
+}
+
+.star{
+    background-image: url(./assets/himmel.jpeg);
+    display: grid;
+    grid-template-areas: 
+    "halos halos data data . .";
+}
+
+.halos{
+    grid-area: halos;
+}
+
+.data{
+    grid-area: data;
+    justify-items: center;
+}
+
+.planet{
+    width: 20vw;
+    height: 100vh;
+    top: 79.94px;
+    gap: 0px;
+    opacity: 0px;
+    background: rgba(66, 142, 212, 1);
+    border-radius: 50%;
+    transform: translateX(-120px);
+}
+
+.haloOne{
+    width: 25vw;
+    height: 100vh;
+    top: 79.94px;
+    gap: 0px;
+    background: rgba(66, 142, 212, 1);
+    border-radius: 50%;
+    opacity: 15%;
+}
+
+.haloTwo{
+    width: 30vw;
+    height: 100vh;
+    top: 79.94px;
+    gap: 0px;
+    background: rgba(66, 142, 212, 1);
+    border-radius: 50%;
+    opacity: 5%;
+}
+
+p{
+    border-bottom: wheat 1px;
+}
