@@ -6,6 +6,7 @@ body{
     grid-template-areas: 
     "planets planets planets h1 h1 h1 h1"
     "planets planets planets h2 h2 h2"
+    "planets planets planets p p p"
     "planets planets planets planets planets planets";
 }
 
@@ -35,6 +36,10 @@ h2{
     grid-area: h2;
 }
 
+button{
+    border: none;
+}
+
 .planets{
     width: 100vw;
     grid-area: planets;
@@ -52,7 +57,7 @@ h2{
     opacity: 0px;
     background: rgba(255, 208, 41, 1);
     border-radius: 50%;
-    transform: translateX(-120px);
+    transform: translateX(-150px);
 }
 
 .neptunus{
@@ -167,7 +172,7 @@ h2{
     opacity: 0px;
     background: rgba(66, 142, 212, 1);
     border-radius: 50%;
-    transform: translateX(-120px);
+    transform: translateX(-150px);
 }
 
 .haloOne{
@@ -192,4 +197,5 @@ h2{
 
 p{
     border-bottom: wheat 1px;
+    grid-area: p;
 }
