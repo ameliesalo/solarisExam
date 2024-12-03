@@ -46,21 +46,22 @@ const getPlanets = async (apiType, endpoint, key) => {
     console.log(JSON.stringify(bodiesDataJson.bodies[0].name))
     console.log(bodiesDataJson.bodies[0].name)
 
-    sun.addEventListener('click', () => {
-        console.log(bodiesDataJson.bodies[0].name)
-        window.location.replace('http://127.0.0.1:5500/solarisExam/solarisExam/planet.html')
-        planetName.innerText = bodiesDataJson.bodies[0].name
-        latin.innerText = bodiesDataJson.bodies[0].latinName
-        info.innerText = bodiesDataJson.bodies[0].desc
-    })
+    sun.addEventListener('click', sun)
 
     
     
 }
 
-
 getKey('POST', '/keys')
 
+function solis(){
+    console.log(bodiesDataJson.bodies[0].name)
+    window.location.replace('http://solarisExam/solarisExam/planet.html')
+    planetName.innerText = bodiesDataJson.bodies[0].name
+    latin.innerText = bodiesDataJson.bodies[0].latinName
+    info.innerText = bodiesDataJson.bodies[0].desc
+}
+
 planet.addEventListener('click', () => {
-    window.location.replace('http://127.0.0.1:5500/solarisExam/solarisExam/index.html')
+    window.location.replace('http://solarisExam/solarisExam/index.html')
 })
