@@ -7,13 +7,17 @@ const jupiter = document.querySelector('.jupiter')
 const saturnus = document.querySelector('.saturnus')
 const uranus = document.querySelector('.uranus')
 const neptunus = document.querySelector('.neptunus')
-const planet = document.querySelector('.planet')
+
+const planets = document.querySelector('.planets')
+const displayInfo = document.querySelector('.displayInfo')
+displayInfo.style.display = 'none'
+const halos = document.querySelector('.halos')
 
 let planetName = document.querySelector('.name')
-let latin = document.querySelector('.latin')
-let info = document.querySelector('.info')
-
-const bodiesDataJson = []
+let planetLatinName = document.querySelector('.latin')
+let planetDesc = document.querySelector('.info')
+let infoList = document.querySelector('.infoList')
+let moons = document.querySelector('.moons')
 
 const getKey = (apiType, endpoint) => {
     const url = 'https://n5n3eiyjb0.execute-api.eu-north-1.amazonaws.com' + endpoint
@@ -43,27 +47,182 @@ const getPlanets = async (apiType, endpoint, key) => {
     const bodiesDataJson = await bodiesData.json()
 
     console.log(bodiesDataJson)
-    
-    
 
-    sun.addEventListener('click', () => {
-        console.log(bodiesDataJson.bodies[0].name)
-        window.location.replace('http://127.0.0.1:5500/solarisExam/solarisExam/planet.html')
-        planetName.innerText = bodiesDataJson.bodies[0].name
-        latin.innerText = bodiesDataJson.bodies[0].latinName
-        info.innerText = bodiesDataJson.bodies[0].desc
-    })
 
-    
-    
+sun.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[0].name
+    planetLatinName.innerText = bodiesDataJson.bodies[0].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[0].desc
+    infoList.innerHTML = 
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[0].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[0].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[0].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[0].temp.night} C </li> 
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[0].moons}</li></ul> `
+})
+
+mercury.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[1].name
+    planetLatinName.innerText = bodiesDataJson.bodies[1].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[1].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[1].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[1].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[1].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[1].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[1].moons.name}</li></ul> `
+})
+
+venus.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[2].name
+    planetLatinName.innerText = bodiesDataJson.bodies[2].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[2].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[2].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[2].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[2].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[2].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[2].moons.name}</li></ul> `
+})
+
+earth.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[3].name
+    planetLatinName.innerText = bodiesDataJson.bodies[3].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[3].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[3].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[3].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[3].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[3].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[3].moons.name}</li></ul> `
+})
+
+mars.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[4].name
+    planetLatinName.innerText = bodiesDataJson.bodies[4].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[4].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[4].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[4].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[4].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[4].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[4].moons.name}</li></ul> `
+})
+
+jupiter.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[5].name
+    planetLatinName.innerText = bodiesDataJson.bodies[5].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[5].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[5].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[5].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[5].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[5].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[5].moons.name}</li></ul> `
+})
+
+saturnus.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[6].name
+    planetLatinName.innerText = bodiesDataJson.bodies[6].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[6].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[6].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[6].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[6].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[6].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[6].moons.name}</li></ul> `
+})
+
+uranus.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[7].name
+    planetLatinName.innerText = bodiesDataJson.bodies[7].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[7].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[7].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[7].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[7].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[7].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[7].moons.name}</li></ul> `
+})
+
+neptunus.addEventListener('click', () => {
+    planets.style.display = 'none'
+    displayInfo.style.display = 'grid'
+
+    planetName.innerText = bodiesDataJson.bodies[8].name
+    planetLatinName.innerText = bodiesDataJson.bodies[8].latinName
+    planetDesc.innerText = bodiesDataJson.bodies[8].desc
+    infoList.innerHTML =
+    `<ul> 
+    <li>OMKRETS: ${bodiesDataJson.bodies[8].circumference} KM </li>
+    <li> KM FRÅN SOLEN: ${bodiesDataJson.bodies[8].distance} KM </li>
+    <li> MAX TEMP: ${bodiesDataJson.bodies[8].temp.day} C </li>
+    <li> MIN TEMP: ${bodiesDataJson.bodies[8].temp.night} C </li>
+    </ul>`
+    moons.innerHTML = 
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[8].moons.name}</li></ul> `
+})
+
 }
 
 getKey('POST', '/keys')
 
-function solis(){
-    
-}
-
-planet.addEventListener('click', () => {
-    window.location.replace('http://127.0.0.1:5500/solarisExam/solarisExam/index.html')
+halos.addEventListener('click', () => {
+    displayInfo.style.display = 'none'
+    planets.style.display = 'grid'
 })
+
+
+
+
+
+
+
