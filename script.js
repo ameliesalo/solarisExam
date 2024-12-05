@@ -64,7 +64,7 @@ sun.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[0].temp.night} C </li> 
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[0].moons}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[0].moons[0]}</li></ul> `
 })
 
 mercury.addEventListener('click', () => {
@@ -82,7 +82,7 @@ mercury.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[1].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[1].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[1].moons[0]}</li></ul> `
 })
 
 venus.addEventListener('click', () => {
@@ -100,7 +100,7 @@ venus.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[2].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[2].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[2].moons[0]}</li></ul> `
 })
 
 earth.addEventListener('click', () => {
@@ -118,7 +118,7 @@ earth.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[3].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[3].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[3].moons[0]}</li></ul> `
 })
 
 mars.addEventListener('click', () => {
@@ -136,7 +136,7 @@ mars.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[4].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[4].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[4].moons[0, 1]}</li></ul> `
 })
 
 jupiter.addEventListener('click', () => {
@@ -154,7 +154,7 @@ jupiter.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[5].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[5].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[5].moons[0, 1, 2, 3, 4, 5]}</li></ul> `
 })
 
 saturnus.addEventListener('click', () => {
@@ -172,7 +172,7 @@ saturnus.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[6].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[6].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[6].moons.length}</li></ul> `
 })
 
 uranus.addEventListener('click', () => {
@@ -190,7 +190,7 @@ uranus.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[7].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[7].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[7].moons.length}</li></ul> `
 })
 
 neptunus.addEventListener('click', () => {
@@ -208,7 +208,7 @@ neptunus.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[8].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[8].moons.name}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[8].moons.length}</li></ul> `
 })
 
 }
