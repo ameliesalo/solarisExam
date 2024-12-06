@@ -154,7 +154,7 @@ jupiter.addEventListener('click', () => {
     <li> MIN TEMP: ${bodiesDataJson.bodies[5].temp.night} C </li>
     </ul>`
     moons.innerHTML = 
-    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[5].moons[0, 1, 2, 3, 4, 5]}</li></ul> `
+    `<ul><li> MÅNAR: ${bodiesDataJson.bodies[5].moons.length}</li></ul> `
 })
 
 saturnus.addEventListener('click', () => {

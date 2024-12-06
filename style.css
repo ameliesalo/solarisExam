@@ -90,6 +90,15 @@ button{
     background: rgba(199, 170, 114, 1);
     border-radius: 50%;
 }
+div{
+    width: 170px;
+    height: 5px;
+
+    border-radius: 50%;
+    background-color: burlywood;
+
+    overflow-x: visible;
+}
 
 .jupiter{
     width: 188px;
@@ -159,7 +168,7 @@ button{
 
 .data{
     width: 50vw;
-    height: 80vh;
+    height: 100vh;
 
     grid-area: data;
     margin-top: auto;
@@ -222,7 +231,10 @@ p{
 ul{
     width: 50vw;
     height: 5vh;
+
     list-style: none;
+    border-bottom: wheat;
+
     display: grid;
     grid-template-areas: 
     'one two'
@@ -231,10 +243,12 @@ ul{
 ul :nth-child(1){
     grid-area: one;
     margin-right: auto;
+    margin-bottom: auto;
 }
 ul :nth-child(2){
     grid-area: two;
     margin-left: auto;
+    margin-bottom: auto;
 }
 ul :nth-child(3){
     grid-area: three;
