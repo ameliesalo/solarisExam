@@ -91,13 +91,14 @@ button{
     border-radius: 50%;
 }
 div{
-    width: 170px;
+    width: 200px;
     height: 5px;
 
     border-radius: 50%;
     background-color: burlywood;
 
     overflow-x: visible;
+    transform: translateX(-25px);
 }
 
 .jupiter{
